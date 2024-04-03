@@ -1,4 +1,18 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+const path = require('path')
 
-export default nextConfig;
+
+
+module.exports = {
+    sassOptions: {
+        includePaths: [path.join(__dirname, 'styles')],
+      },
+    images: {
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'cdn.sanity.io',
+     pathname: '/images/d1s3pdmc/production/*',
+        },
+      ],
+    },
+  };
